@@ -48,13 +48,13 @@ There are also a few bonus things I added:
 
 The backend exposes these endpoints under `/api/tasks`:
 
-- `GET /api/tasks` � returns all tasks
-- `POST /api/tasks` � creates a new task, expects `title` (required), `description`, `priority`, and `dueDate` in the body
-- `PUT /api/tasks/:id` � updates an existing task
-- `DELETE /api/tasks/:id` � deletes a task
-- `PATCH /api/tasks/:id/toggle` � flips the completed status
+- `GET /api/tasks`  returns all tasks
+- `POST /api/tasks`  creates a new task, expects `title` (required), `description`, `priority`, and `dueDate` in the body
+- `PUT /api/tasks/:id`  updates an existing task
+- `DELETE /api/tasks/:id`  deletes a task
+- `PATCH /api/tasks/:id/toggle`  flips the completed status
 
-Validation runs on both sides � the frontend checks before sending and the backend middleware checks again just to be safe.
+Validation runs on both sides  the frontend checks before sending and the backend middleware checks again just to be safe.
 
 ---
 
@@ -63,16 +63,16 @@ Validation runs on both sides � the frontend checks before sending and the bac
 ```
 task-manager/
 +-- backend/
-�   +-- server.js
-�   +-- routes/tasks.js
-�   +-- middleware/validation.js
+ +-- server.js
+   +-- routes/tasks.js
+   +-- middleware/validation.js
 +-- frontend/
-�   +-- src/
-�       +-- App.js
-�       +-- components/
-�       +-- hooks/useTasks.js
-�       +-- services/taskServices.js
-�       +-- styles/
+   +-- src/
+       +-- App.js
+       +-- components/
+       +-- hooks/useTasks.js
+       +-- services/taskServices.js
+       +-- styles/
 +-- .gitignore
 +-- README.md
 ```
@@ -81,7 +81,7 @@ task-manager/
 
 ## A few notes on decisions I made
 
-I had a similar project at a previous job so I drew design and UX references from that, especially the drag and drop behavior � it inserts the dragged card at the target position rather than swapping the two cards.
+I had a similar project at a previous job so I drew design and UX references from that, especially the drag and drop behavior  it inserts the dragged card at the target position rather than swapping the two cards.
 
 I put all the state logic (filter, sort, search, tasks) into a single `useTasks` hook so `App.js` stays clean and readable. The service layer (`taskServices.js`) is a separate hook so the fetch functions could be reused somewhere else if needed.
 
