@@ -1,0 +1,126 @@
+.page-wrapper {
+  min-height: 100vh;
+  background: var(--bg-page);
+}
+
+.main {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.all-tasks {
+  max-width: 80rem;
+  margin: 2rem auto 0;
+  padding: 0 1.5rem 3rem;
+}
+
+.all-tasks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.all-tasks-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.all-tasks h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.search-input,
+.sort-select {
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--border-input);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  background: var(--bg-surface);
+  color: var(--text-body);
+  transition: border-color 0.2s;
+}
+
+.search-input {
+  width: 220px;
+}
+
+.search-input:focus,
+.sort-select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.no-results {
+  color: var(--text-faint);
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background: var(--bg-surface);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 28rem;
+  box-shadow: 0 20px 60px var(--shadow-modal);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: var(--bg-muted);
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.close-button:hover {
+  background: var(--border);
+}

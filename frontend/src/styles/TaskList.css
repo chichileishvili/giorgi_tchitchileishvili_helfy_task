@@ -1,0 +1,54 @@
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--bg-muted);
+  padding: 16px 0;
+}
+
+.track {
+  display: flex;
+  gap: 16px;
+  will-change: transform;
+}
+
+.card-slot {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.fade-left,
+.fade-right {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  z-index: 10;
+}
+
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-muted), transparent);
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-muted), transparent);
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 2px dashed var(--border-input);
+  background-color: var(--bg-page);
+  padding: 48px;
+}
+
+.empty-state p {
+  color: var(--text-faint);
+  font-size: 14px;
+  margin: 0;
+}

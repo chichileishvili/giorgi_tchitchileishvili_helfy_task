@@ -1,0 +1,30 @@
+.task-filter {
+  display: flex;
+  gap: 6px;
+}
+
+.filter-btn {
+  padding: 5px 14px;
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
+  background: var(--bg-surface);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.filter-btn:hover {
+  background: var(--bg-muted);
+  border-color: var(--text-faint);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
